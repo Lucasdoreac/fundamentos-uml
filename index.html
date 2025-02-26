@@ -3,155 +3,687 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fundamentos da UML</title>
+  <title>Fundamentos da UML - Guia Completo</title>
   <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="Site educativo completo sobre UML (Unified Modeling Language) - Aprenda sobre diagramas, relacionamentos e modelagem avançada.">
+  <meta name="description" content="Site educativo completo sobre UML (Unified Modeling Language) - Aprenda sobre diagramas, relacionamentos e modelagem avançada com exemplos práticos.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Fundamentos da UML</h1>
+      <h1><i class="fas fa-project-diagram"></i> Fundamentos da UML</h1>
       <nav>
-        <a href="#fundamentos">Fundamentos e Conceitos</a>
-        <a href="#diagramas">Diagramas da UML</a>
-        <a href="#relacionamentos">Relacionamentos e Interações</a>
-        <a href="#avancada">Modelagem Avançada</a>
-        <a href="#quiz">Quiz Interativo</a>
-        <a href="#referencias">Aprofundamento</a>
+        <a href="#fundamentos"><i class="fas fa-book"></i> Fundamentos</a>
+        <a href="#diagramas"><i class="fas fa-sitemap"></i> Diagramas</a>
+        <a href="#relacionamentos"><i class="fas fa-link"></i> Relacionamentos</a>
+        <a href="#avancada"><i class="fas fa-graduation-cap"></i> Avançado</a>
+        <a href="#ferramentas"><i class="fas fa-tools"></i> Ferramentas</a>
+        <a href="#quiz"><i class="fas fa-question-circle"></i> Quiz</a>
       </nav>
     </div>
   </header>
   
   <main>
     <div class="container">
+      <!-- Banner principal -->
+      <section id="banner" class="hero-section">
+        <div class="hero-content">
+          <h2>Aprenda UML de forma completa e prática</h2>
+          <p>Guia definitivo para compreender a Linguagem de Modelagem Unificada e sua aplicação no desenvolvimento de software.</p>
+          <div class="hero-buttons">
+            <a href="#diagramas" class="btn primary-btn"><i class="fas fa-sitemap"></i> Explorar Diagramas</a>
+            <a href="#ferramentas" class="btn secondary-btn"><i class="fas fa-tools"></i> Ferramentas UML</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introdução com ícones -->
+      <section id="introducao" class="feature-section">
+        <div class="feature-grid">
+          <div class="feature-item">
+            <i class="fas fa-comments feature-icon"></i>
+            <h3>Comunique com Clareza</h3>
+            <p>Aprenda a expressar requisitos, arquitetura e design de forma que todos no projeto entendam.</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-puzzle-piece feature-icon"></i>
+            <h3>Visualize Sistemas Complexos</h3>
+            <p>Decomponha sistemas complexos em componentes visuais compreensíveis e gerenciáveis.</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-code-branch feature-icon"></i>
+            <h3>Planeje Antes de Codificar</h3>
+            <p>Identifique problemas no design antes de iniciar a implementação, economizando tempo e recursos.</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-users feature-icon"></i>
+            <h3>Padronize a Comunicação</h3>
+            <p>Use uma linguagem visual padronizada que equipes de desenvolvimento em todo o mundo reconhecem.</p>
+          </div>
+        </div>
+      </section>
+      
       <section id="fundamentos">
-        <h2>Fundamentos e Conceitos</h2>
-        <p><strong>UML (Unified Modeling Language)</strong>, ou Linguagem de Modelagem Unificada, é uma linguagem padrão usada para modelar sistemas de software de forma visual. Ela permite criar representações gráficas (modelos) de um sistema, facilitando a <em>visualização</em>, a <em>especificação</em>, a <em>construção</em> e a <em>documentação</em> dos artefatos do software. Em outras palavras, a UML ajuda a representar um sistema de forma padronizada antes de sua implementação, tornando mais fácil compreender sua estrutura e comportamento.</p>
+        <h2><i class="fas fa-book"></i> Fundamentos e Conceitos</h2>
+        <div class="card-container">
+          <div class="content-card">
+            <h3>O que é UML?</h3>
+            <p><strong>UML (Unified Modeling Language)</strong>, ou Linguagem de Modelagem Unificada, é uma linguagem padrão usada para modelar sistemas de software de forma visual. Ela permite criar representações gráficas (modelos) de um sistema, facilitando a <em>visualização</em>, a <em>especificação</em>, a <em>construção</em> e a <em>documentação</em> dos artefatos do software.</p>
+            <p>A UML oferece uma notação padronizada para expressar:</p>
+            <ul>
+              <li>Estrutura estática de um sistema (classes, objetos)</li>
+              <li>Comportamento (interações, transições de estado)</li>
+              <li>Arquitetura (componentes, implantação)</li>
+              <li>Regras de negócio e requisitos (casos de uso)</li>
+            </ul>
+          </div>
+          
+          <div class="content-card">
+            <h3>História e Evolução</h3>
+            <p>A UML surgiu nos anos 1990 como resultado da unificação de métodos de modelagem orientados a objetos. Seus criadores (conhecidos como os "Três Amigos": Grady Booch, Ivar Jacobson e James Rumbaugh) consolidaram suas metodologias em uma linguagem comum, posteriormente padronizada pelo <strong>OMG (Object Management Group)</strong>.</p>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">1994-1995</div>
+                <div class="timeline-content">
+                  <h4>Unificação inicial</h4>
+                  <p>Booch e Rumbaugh começam a unificar seus métodos (Booch'93 e OMT)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">1995</div>
+                <div class="timeline-content">
+                  <h4>OOSE se junta</h4>
+                  <p>Jacobson integra seu método OOSE no processo de unificação</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">1997</div>
+                <div class="timeline-content">
+                  <h4>UML 1.0</h4>
+                  <p>Primeira versão adotada pelo OMG</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">2005</div>
+                <div class="timeline-content">
+                  <h4>UML 2.0</h4>
+                  <p>Maior revisão com novos diagramas e conceitos</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Atual</div>
+                <div class="timeline-content">
+                  <h4>UML 2.5+</h4>
+                  <p>Refinamentos contínuos e ajustes de consistência</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        <p>A UML surgiu nos anos 1990 como resultado da unificação de métodos de modelagem orientados a objetos. Seus criadores (conhecidos como os "Três Amigos": Grady Booch, Ivar Jacobson e James Rumbaugh) consolidaram suas metodologias em uma linguagem comum, posteriormente padronizada pelo <strong>OMG (Object Management Group)</strong>. Desde então, a UML evoluiu (atualmente na versão 2.x) e tornou-se amplamente utilizada em engenharia de software.</p>
+        <div class="content-card">
+          <h3>UML vs. Metodologia</h3>
+          <p>É importante notar que a UML não é um processo ou metodologia de desenvolvimento em si. Ela não dita como conduzir um projeto ou a ordem de atividades, mas fornece uma notação independente de processo que pode ser aplicada em conjunto com qualquer metodologia (por exemplo, RUP, Scrum, etc.).</p>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>UML é</th>
+                  <th>UML não é</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Uma linguagem visual</td>
+                  <td>Uma metodologia de desenvolvimento</td>
+                </tr>
+                <tr>
+                  <td>Um conjunto de notações e semântica</td>
+                  <td>Um processo prescritivo</td>
+                </tr>
+                <tr>
+                  <td>Uma ferramenta de comunicação</td>
+                  <td>Uma solução para todos os problemas</td>
+                </tr>
+                <tr>
+                  <td>Um padrão aberto</td>
+                  <td>Limitado a orientação a objetos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Desenvolvedores usam a UML para visualizar e comunicar o design do sistema, identificar classes e componentes-chave e entender como as partes do sistema interagem.</p>
+        </div>
         
-        <p>É importante notar que a UML não é um processo ou metodologia de desenvolvimento em si. Ela não dita como conduzir um projeto ou a ordem de atividades, mas fornece uma notação independente de processo que pode ser aplicada em conjunto com qualquer metodologia (por exemplo, RUP, Scrum, etc.). Desenvolvedores usam a UML para visualizar e comunicar o design do sistema, identificar classes e componentes-chave e entender como as partes do sistema interagem.</p>
-        
-        <p>Um <strong>modelo UML</strong> é a representação abstrata completa de um sistema, podendo incluir vários diagramas diferentes que, juntos, descrevem múltiplos aspectos (estrutura estática, casos de uso, interações dinâmicas, etc.). Já um <strong>diagrama UML</strong> é uma visualização específica, uma projeção do modelo que mostra certos elementos e relacionamentos sob uma certa perspectiva. Diversos diagramas podem ser usados para compor o modelo de um sistema, cada um focando em uma visão particular (por exemplo, visão de casos de uso, visão lógica de classes, visão de processos, visão de implementação, etc.).</p>
-        
-        <p>Em resumo, os fundamentos da UML envolvem entender que se trata de uma linguagem de modelagem visual que abrange múltiplos tipos de diagramas, cada qual servindo para um propósito específico no entendimento do sistema. Nos tópicos a seguir, veremos os principais <em>tipos de diagramas</em>, os <em>relacionamentos</em> fundamentais entre elementos do modelo e alguns conceitos de <em>modelagem avançada</em> disponíveis na UML.</p>
+        <div class="content-card">
+          <h3>Modelos vs. Diagramas</h3>
+          <p>Um <strong>modelo UML</strong> é a representação abstrata completa de um sistema, podendo incluir vários diagramas diferentes que, juntos, descrevem múltiplos aspectos (estrutura estática, casos de uso, interações dinâmicas, etc.).</p>
+          <p>Já um <strong>diagrama UML</strong> é uma visualização específica, uma projeção do modelo que mostra certos elementos e relacionamentos sob uma certa perspectiva.</p>
+          <div class="info-box">
+            <h4><i class="fas fa-lightbulb"></i> Analogia útil</h4>
+            <p>Pense em um modelo UML como a planta completa de um edifício. Cada diagrama seria como uma vista diferente: planta baixa, vista frontal, instalações elétricas, etc. Todas são visualizações do mesmo edifício, mas destacando aspectos específicos.</p>
+          </div>
+        </div>
       </section>
       
       <section id="diagramas">
-        <h2>Diagramas da UML</h2>
-        <p>A UML fornece diversos tipos de diagramas, divididos em duas grandes categorias: <strong>diagramas estruturais</strong> (que mostram a estrutura estática do sistema) e <strong>diagramas comportamentais</strong> (que mostram o comportamento dinâmico e interações no sistema). A seguir estão alguns dos principais diagramas da UML e suas finalidades:</p>
+        <h2><i class="fas fa-sitemap"></i> Diagramas da UML</h2>
+        <p class="section-intro">A UML fornece diversos tipos de diagramas, divididos em duas grandes categorias: <strong>diagramas estruturais</strong> (que mostram a estrutura estática do sistema) e <strong>diagramas comportamentais</strong> (que mostram o comportamento dinâmico e interações no sistema).</p>
         
-        <h3>Diagramas Estruturais (Estáticos)</h3>
-        <ul>
-          <li><strong>Diagrama de Classes:</strong> Representa a estrutura estática do sistema, mostrando classes, atributos, métodos e os relacionamentos (associações, herança, etc.) entre elas. É um dos diagramas mais utilizados, servindo de base para grande parte da modelagem orientada a objetos.</li>
-          <li><strong>Diagrama de Objetos:</strong> É uma instância do diagrama de classes em um dado momento, mostrando objetos concretos e seus relacionamentos em um estado específico do sistema (uma "fotografia" dos objetos e links num instante). Útil para exemplificar configurações de objetos.</li>
-          <li><strong>Diagrama de Pacotes:</strong> Organiza o modelo em agrupamentos lógicos (pacotes), mostrando a decomposição do sistema em subsistemas ou módulos. Os pacotes ajudam a estruturar e organizar os elementos (por exemplo, todas as classes de um módulo em um pacote).</li>
-          <li><strong>Diagrama de Componentes:</strong> Mostra os componentes de alto nível do sistema e suas interdependências. Um componente representa uma parte modular e substituível do sistema (por exemplo, um módulo, biblioteca ou serviço). Esse diagrama é útil para visualizar a arquitetura de componentes e como eles se conectam.</li>
-          <li><strong>Diagrama de Implantação (Deployment):</strong> Representa a disposição física do sistema, mostrando nós (servidores, dispositivos, etc.) e os artefatos implantados neles (executáveis, bancos de dados, componentes implantados). Esclarece como o sistema será distribuído em hardware ou nodos de rede.</li>
-          <li><strong>Diagrama de Estrutura Composta:</strong> Detalha a estrutura interna de uma classe ou componente, revelando os elementos internos e colaborações que a constituem. É útil em modelagens mais complexas onde classes têm partes internas ou padrões de composição internas.</li>
-        </ul>
-        
-        <h3>Diagramas Comportamentais (Dinâmicos)</h3>
-        <ul>
-          <li><strong>Diagrama de Casos de Uso:</strong> Descreve as funcionalidades do sistema do ponto de vista do usuário (atores externos). Mostra atores (usuários ou outros sistemas) e casos de uso (funcionalidades ou serviços que o sistema oferece aos atores), bem como relacionamentos entre casos de uso (inclui, estende) e generalização de atores. Esse diagrama fornece uma visão de alto nível dos requisitos funcionais.</li>
-          <li><strong>Diagrama de Sequência:</strong> Detalha interações entre objetos ao longo do tempo, enfatizando a ordem das mensagens trocadas. Cada objeto ou participante é representado por uma lifeline (linha vertical) e as mensagens são setas horizontais de um participante para outro na ordem temporal (de cima para baixo). Útil para modelar cenários de execução, fluxos de eventos ou processos de negócio passo a passo.</li>
-          <li><strong>Diagrama de Comunicação (Colaboração):</strong> Também modela interações entre objetos, porém enfatiza os relacionamentos estruturais entre eles em vez da linha do tempo. Os objetos são ligados por associações que representam possíveis canais de comunicação, e as mensagens trocadas são anotadas nessas conexões. É útil para ver a rede de colaboração entre objetos em um cenário.</li>
-          <li><strong>Diagrama de Atividades:</strong> Representa fluxos de trabalho ou processos (sequência de atividades e decisões). Assemelha-se a um fluxograma, mostrando ações, fluxos de controle (setas), decisões/ramificações, inícios e fins. É ideal para modelar lógica de negócio, algoritmos ou processos envolvendo múltiplos passos e ramificações condicionais.</li>
-          <li><strong>Diagrama de Máquina de Estados (Diagrama de Estados):</strong> Descreve os possíveis estados de um objeto e as transições (mudanças de estado) causadas por eventos. Cada estado é representado por um retângulo arredondado e as transições por setas etiquetadas com eventos ou condições. Esse diagrama é útil para classes com comportamento complexo dependente de estado (por exemplo, o ciclo de vida de um objeto, como um pedido que pode estar em vários estados).</li>
-          <li><strong>Diagrama de Visão Geral de Interação:</strong> Combina elementos de diagramas de atividades e de sequência para mostrar uma visão geral de como interações se encadeiam. Fornece uma visão de alto nível do fluxo entre várias interações, podendo decompor processos complexos em subfluxos ou cenários.</li>
-        </ul>
-        
-        <div class="diagram-example">
-          <img src="images/class-diagram.png" alt="Exemplo de Diagrama de Classes" class="diagram-img">
-          <p class="caption">Exemplo simplificado de um Diagrama de Classes</p>
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="estruturais">Diagramas Estruturais</button>
+            <button class="tab-btn" data-tab="comportamentais">Diagramas Comportamentais</button>
+          </div>
+          
+          <div class="tab-content active" id="estruturais">
+            <div class="diagram-grid">
+              <div class="diagram-item">
+                <h3>Diagrama de Classes</h3>
+                <img src="images/class-diagram.png" alt="Exemplo de Diagrama de Classes" class="diagram-img">
+                <p>Representa a estrutura estática do sistema, mostrando classes, atributos, métodos e os relacionamentos entre elas.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Modelar a estrutura estática de um sistema orientado a objetos</li>
+                  <li><strong>Quando usar:</strong> Durante o design detalhado do sistema</li>
+                  <li><strong>Componentes:</strong> Classes, interfaces, atributos, métodos, relacionamentos</li>
+                </ul>
+                <a href="https://app.diagrams.net/?splash=0&libs=uml#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1WpuszQ7pK_I9O4KcSx3Bt2MvOABxhdFg%26export%3Ddownload" target="_blank" class="btn small-btn">Criar no draw.io <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              
+              <div class="diagram-item">
+                <h3>Diagrama de Objetos</h3>
+                <img src="images/relationships.png" alt="Exemplo de Diagrama de Objetos" class="diagram-img">
+                <p>É uma instância do diagrama de classes em um dado momento, mostrando objetos concretos e seus relacionamentos.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Mostrar "fotografias" do sistema em um momento específico</li>
+                  <li><strong>Quando usar:</strong> Para explicar estruturas complexas com exemplos concretos</li>
+                  <li><strong>Componentes:</strong> Objetos (instâncias de classes), links (instâncias de associações)</li>
+                </ul>
+                <a href="https://online.visual-paradigm.com/diagrams/templates/object-diagram/simple-object-diagram/" target="_blank" class="btn small-btn">Ver exemplo <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              
+              <div class="diagram-item">
+                <h3>Diagrama de Pacotes</h3>
+                <img src="images/class-diagram.png" alt="Exemplo de Diagrama de Pacotes" class="diagram-img">
+                <p>Organiza o modelo em agrupamentos lógicos (pacotes), mostrando a decomposição do sistema em subsistemas ou módulos.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Organizar elementos do modelo em grupos lógicos</li>
+                  <li><strong>Quando usar:</strong> Para estruturar sistemas grandes e complexos</li>
+                  <li><strong>Componentes:</strong> Pacotes, dependências entre pacotes</li>
+                </ul>
+                <a href="https://www.lucidchart.com/pages/uml-package-diagram" target="_blank" class="btn small-btn">Aprender mais <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              
+              <div class="diagram-item">
+                <h3>Diagrama de Componentes</h3>
+                <img src="images/relationships.png" alt="Exemplo de Diagrama de Componentes" class="diagram-img">
+                <p>Mostra os componentes de alto nível do sistema e suas interdependências, útil para visualizar a arquitetura de sistema.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Modelar componentes de software e suas relações</li>
+                  <li><strong>Quando usar:</strong> Durante o design de arquitetura</li>
+                  <li><strong>Componentes:</strong> Componentes, interfaces, dependências, portas</li>
+                </ul>
+                <a href="https://www.uml-diagrams.org/component-diagrams-examples.html" target="_blank" class="btn small-btn">Ver exemplos <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="comportamentais">
+            <div class="diagram-grid">
+              <div class="diagram-item">
+                <h3>Diagrama de Casos de Uso</h3>
+                <img src="images/class-diagram.png" alt="Exemplo de Diagrama de Casos de Uso" class="diagram-img">
+                <p>Descreve as funcionalidades do sistema do ponto de vista do usuário (atores externos), fornecendo uma visão de alto nível.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Capturar requisitos funcionais do sistema</li>
+                  <li><strong>Quando usar:</strong> No início do processo de desenvolvimento</li>
+                  <li><strong>Componentes:</strong> Atores, casos de uso, relacionamentos</li>
+                </ul>
+                <a href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-use-case-diagram/" target="_blank" class="btn small-btn">Guia completo <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              
+              <div class="diagram-item">
+                <h3>Diagrama de Sequência</h3>
+                <img src="images/relationships.png" alt="Exemplo de Diagrama de Sequência" class="diagram-img">
+                <p>Detalha interações entre objetos ao longo do tempo, enfatizando a ordem das mensagens trocadas.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Modelar interações entre objetos em um cenário</li>
+                  <li><strong>Quando usar:</strong> Para detalhar como objetos colaboram em um cenário específico</li>
+                  <li><strong>Componentes:</strong> Lifelines, mensagens, fragmentos combinados</li>
+                </ul>
+                <a href="https://sequencediagram.org/" target="_blank" class="btn small-btn">Criar online <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              
+              <div class="diagram-item">
+                <h3>Diagrama de Atividades</h3>
+                <img src="images/class-diagram.png" alt="Exemplo de Diagrama de Atividades" class="diagram-img">
+                <p>Representa fluxos de trabalho ou processos (sequência de atividades e decisões), semelhante a um fluxograma.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Modelar processos de negócio e fluxos de trabalho</li>
+                  <li><strong>Quando usar:</strong> Para visualizar algoritmos ou processos complexos</li>
+                  <li><strong>Componentes:</strong> Ações, decisões, ramificações, fusões, junções</li>
+                </ul>
+                <a href="https://creately.com/blog/diagrams/activity-diagram-tutorial/" target="_blank" class="btn small-btn">Tutorial prático <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              
+              <div class="diagram-item">
+                <h3>Diagrama de Máquina de Estados</h3>
+                <img src="images/relationships.png" alt="Exemplo de Diagrama de Estados" class="diagram-img">
+                <p>Descreve os possíveis estados de um objeto e as transições (mudanças de estado) causadas por eventos.</p>
+                <ul class="diagram-features">
+                  <li><strong>Uso principal:</strong> Modelar o comportamento baseado em estados de um objeto</li>
+                  <li><strong>Quando usar:</strong> Para objetos com comportamento complexo baseado em estados</li>
+                  <li><strong>Componentes:</strong> Estados, transições, eventos, ações</li>
+                </ul>
+                <a href="https://www.lucidchart.com/pages/uml-state-machine-diagram" target="_blank" class="btn small-btn">Criar diagrama <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
         
-        <p>Vale notar que, embora existam muitos tipos de diagramas (a UML 2.x define 14 tipos), na prática nem todos são usados em um mesmo projeto. Os diagramas mais comuns em projetos de software típicos incluem casos de uso, classes, sequência e atividades, complementados às vezes por diagramas de estados e de componentes/implantação quando necessário. A escolha dos diagramas depende do contexto e dos aspectos do sistema que se deseja enfatizar ou comunicar.</p>
+        <div class="info-box">
+          <h4><i class="fas fa-info-circle"></i> Dica de uso prático</h4>
+          <p>Embora existam muitos tipos de diagramas, na prática nem todos são usados em um mesmo projeto. Os diagramas mais comuns em projetos de software típicos incluem casos de uso, classes, sequência e atividades. A escolha dos diagramas depende do contexto e dos aspectos do sistema que se deseja enfatizar ou comunicar.</p>
+        </div>
       </section>
       
       <section id="relacionamentos">
-        <h2>Relacionamentos e Interações</h2>
-        <p>Os relacionamentos definem como os elementos do modelo se conectam ou se influenciam. Em diagramas de classes (estrutura estática), os relacionamentos principais incluem:</p>
-        <ul>
-          <li><strong>Associação:</strong> Relação estrutural que conecta duas classes, indicando que objetos de uma podem se relacionar com objetos da outra. Por exemplo, <em>Aluno</em> está associado a <em>Curso</em> (um aluno se matricula em cursos). Associações podem ter <em>multiplicidade</em> nas pontas (por exemplo, um curso pode ter muitos alunos, um aluno pode estar em vários cursos) e também podem ser <em>nomeadas</em> para indicar o papel de cada lado. É representada por uma linha simples ligando as classes.</li>
-          <li><strong>Agregação:</strong> Um tipo especial de associação que indica uma relação todo-parte <em>("é parte de")</em>, porém com baixo acoplamento. A classe agregada (parte) pode existir independentemente do todo. Exemplo: uma <em>Universidade</em> agrega vários <em>Departamentos</em>; se a universidade for fechada, os departamentos poderiam, em teoria, existir por si sós (ou serem realocados). Graficamente, a agregação é representada por um losango vazio na extremidade do lado do todo.</li>
-          <li><strong>Composição:</strong> É uma forma mais forte de agregação (também chamada de relação todo-parte compósita). Indica propriedade exclusiva e dependência de vida: a parte não existe sem o todo. Exemplo: um <em>Pedido</em> compõe <em>Itens do Pedido</em>; se o pedido é deletado, os itens também são. Graficamente, usa-se um losango preto/preenchido no lado do todo. <a href="#" onclick="openModal('modalComp'); return false;">(Comparar Agregação vs Composição)</a></li>
-          <li><strong>Generalização (Herança):</strong> Relacionamento em que uma classe especializada (subclasse) herda atributos e operações de outra classe mais geral (superclasse). Representa um relacionamento <em>"é-um"</em>; por exemplo, <em>Aluno</em> é uma especialização de <em>Pessoa</em>. Graficamente, é uma seta com linha sólida e cabeça de triângulo vazado apontando para a superclasse.</li>
-          <li><strong>Dependência:</strong> Indica que uma classe depende de outra para sua definição ou funcionamento, mas de forma mais fraca que uma associação. Por exemplo, uma classe <em>Relatório</em> depende de <em>BancoDeDados</em> (pois usa seus serviços), mas não mantém uma referência fixa. É representada por uma seta tracejada.</li>
-          <li><strong>Realização (Implementação de Interface):</strong> Relação entre uma interface (conjunto de operações abstratas) e uma classe ou componente que implementa essa interface. Indica que a classe fornece a funcionalidade declarada pela interface. Graficamente, é desenhada como uma seta tracejada com triângulo vazado apontando para a interface.</li>
-        </ul>
+        <h2><i class="fas fa-link"></i> Relacionamentos e Interações</h2>
+        <p class="section-intro">Os relacionamentos definem como os elementos do modelo se conectam ou se influenciam. Compreender os diferentes tipos de relacionamentos é fundamental para criar modelos UML precisos e significativos.</p>
         
-        <div class="diagram-example">
-          <img src="images/relationships.png" alt="Relacionamentos na UML" class="diagram-img">
-          <p class="caption">Representação visual dos principais relacionamentos na UML</p>
+        <div class="content-card">
+          <h3>Relacionamentos em Diagramas de Classes</h3>
+          <div class="relationship-container">
+            <div class="relationship-item">
+              <h4>Associação</h4>
+              <div class="relationship-diagram">
+                <img src="images/class-diagram.png" alt="Associação UML" class="relationship-img">
+              </div>
+              <p>Relação estrutural que conecta duas classes, indicando que objetos de uma podem se relacionar com objetos da outra.</p>
+              <p>Exemplo: <em>Aluno</em> está associado a <em>Curso</em> (um aluno se matricula em cursos).</p>
+              <ul class="relationship-features">
+                <li><strong>Representação:</strong> Linha simples entre classes</li>
+                <li><strong>Multiplicidade:</strong> Indica quantas instâncias participam (1, 0..1, *, 1..*)</li>
+                <li><strong>Navegabilidade:</strong> Pode ser unidirecional ou bidirecional</li>
+              </ul>
+            </div>
+            
+            <div class="relationship-item">
+              <h4>Agregação</h4>
+              <div class="relationship-diagram">
+                <img src="images/relationships.png" alt="Agregação UML" class="relationship-img">
+              </div>
+              <p>Um tipo especial de associação que indica uma relação todo-parte <em>("é parte de")</em>, porém com baixo acoplamento. A classe agregada (parte) pode existir independentemente do todo.</p>
+              <p>Exemplo: uma <em>Universidade</em> agrega vários <em>Departamentos</em>; se a universidade for fechada, os departamentos poderiam, em teoria, existir por si sós.</p>
+              <ul class="relationship-features">
+                <li><strong>Representação:</strong> Losango vazio no lado do todo</li>
+                <li><strong>Característica-chave:</strong> Partes podem existir sem o todo</li>
+                <li><strong>Ciclo de vida:</strong> Independente entre todo e parte</li>
+              </ul>
+            </div>
+            
+            <div class="relationship-item">
+              <h4>Composição</h4>
+              <div class="relationship-diagram">
+                <img src="images/class-diagram.png" alt="Composição UML" class="relationship-img">
+              </div>
+              <p>É uma forma mais forte de agregação (também chamada de relação todo-parte compósita). Indica propriedade exclusiva e dependência de vida: a parte não existe sem o todo.</p>
+              <p>Exemplo: um <em>Pedido</em> compõe <em>Itens do Pedido</em>; se o pedido é deletado, os itens também são.</p>
+              <ul class="relationship-features">
+                <li><strong>Representação:</strong> Losango preenchido no lado do todo</li>
+                <li><strong>Característica-chave:</strong> Partes não podem existir sem o todo</li>
+                <li><strong>Ciclo de vida:</strong> As partes são criadas e destruídas com o todo</li>
+              </ul>
+              <button onclick="openModal('modalComp')" class="btn small-btn">Comparar Agregação vs Composição</button>
+            </div>
+            
+            <div class="relationship-item">
+              <h4>Generalização (Herança)</h4>
+              <div class="relationship-diagram">
+                <img src="images/relationships.png" alt="Generalização UML" class="relationship-img">
+              </div>
+              <p>Relacionamento em que uma classe especializada (subclasse) herda atributos e operações de outra classe mais geral (superclasse).</p>
+              <p>Exemplo: <em>Aluno</em> é uma especialização de <em>Pessoa</em>.</p>
+              <ul class="relationship-features">
+                <li><strong>Representação:</strong> Seta com linha sólida e triângulo vazado apontando para a superclasse</li>
+                <li><strong>Relacionamento:</strong> "é-um"</li>
+                <li><strong>Implementação:</strong> Herança em linguagens orientadas a objetos</li>
+              </ul>
+            </div>
+          </div>
         </div>
         
-        <p>Em diagramas de <strong>casos de uso</strong>, também há relacionamentos específicos entre casos de uso:</p>
-        <ul>
-          <li><strong>Include (Inclusão):</strong> Um caso de uso base incorpora explicitamente o comportamento de outro caso de uso em seu fluxo. Representado por uma seta tracejada etiquetada &laquo;include&raquo; apontando para o caso de uso incluído. Usa-se para fatorar trechos comuns de fluxos em casos de uso separados.</li>
-          <li><strong>Extend (Extensão):</strong> Um caso de uso opcional que estende o comportamento de um caso de uso base em certos pontos de extensão. Representado por seta tracejada com &laquo;extend&raquo; apontando do caso estendido para o caso base. Indica funcionalidades adicionais executadas sob condições específicas.</li>
-        </ul>
+        <div class="content-card">
+          <h3>Relacionamentos em Diagramas de Casos de Uso</h3>
+          <div class="relationship-container small-grid">
+            <div class="relationship-item">
+              <h4>Include (Inclusão)</h4>
+              <div class="relationship-diagram">
+                <img src="images/class-diagram.png" alt="Inclusão em Casos de Uso" class="relationship-img">
+              </div>
+              <p>Um caso de uso base incorpora explicitamente o comportamento de outro caso de uso em seu fluxo.</p>
+              <p>Exemplo: "Comprar Produto" inclui "Processar Pagamento".</p>
+              <ul class="relationship-features">
+                <li><strong>Representação:</strong> Seta tracejada com &laquo;include&raquo;</li>
+                <li><strong>Obrigatoriedade:</strong> Sempre ocorre quando o caso de uso base é executado</li>
+                <li><strong>Propósito:</strong> Reutilizar funcionalidades comuns</li>
+              </ul>
+            </div>
+            
+            <div class="relationship-item">
+              <h4>Extend (Extensão)</h4>
+              <div class="relationship-diagram">
+                <img src="images/relationships.png" alt="Extensão em Casos de Uso" class="relationship-img">
+              </div>
+              <p>Um caso de uso opcional que estende o comportamento de um caso de uso base em certos pontos de extensão.</p>
+              <p>Exemplo: "Oferecer Desconto" estende "Finalizar Compra" sob certas condições.</p>
+              <ul class="relationship-features">
+                <li><strong>Representação:</strong> Seta tracejada com &laquo;extend&raquo;</li>
+                <li><strong>Obrigatoriedade:</strong> Ocorre apenas se condições específicas forem atendidas</li>
+                <li><strong>Pontos de extensão:</strong> Locais específicos onde o comportamento pode ser estendido</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         
-        <p>Nas interações dinâmicas modeladas em diagramas de sequência ou comunicação, o foco está em como os objetos se relacionam ao trocar <strong>mensagens</strong>. Essas mensagens podem representar chamadas de métodos, envio de sinais ou criação/remoção de objetos. No <em>diagrama de sequência</em>, as interações são organizadas linearmente no tempo: é fácil ver a ordem em que os eventos ocorrem e a duração de cada interação (podemos incluir <em>barras de ativação</em> para indicar quando um objeto está em foco de execução). Já no <em>diagrama de comunicação</em>, vemos uma rede de objetos conectados e numeramos ou anotamos as mensagens para indicar a ordem.</p>
-        
-        <p>Em ambos os casos, as interações ilustram colaborações entre partes do sistema para realizar um determinado cenário ou caso de uso. Esses diagramas ajudam a responder perguntas como "quem faz o quê?" e "em que ordem?". Eles complementam os diagramas estáticos, fornecendo a visão de como o comportamento flui através das estruturas definidas.</p>
+        <div class="content-card">
+          <h3>Interações em Diagramas Dinâmicos</h3>
+          <p>Nas interações dinâmicas modeladas em diagramas de sequência ou comunicação, o foco está em como os objetos se relacionam ao trocar <strong>mensagens</strong>. Essas mensagens podem representar chamadas de métodos, envio de sinais ou criação/remoção de objetos.</p>
+          
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Diagrama de Sequência</th>
+                  <th>Diagrama de Comunicação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Organiza interações linearmente no tempo (de cima para baixo)</td>
+                  <td>Organiza interações em uma rede de objetos</td>
+                </tr>
+                <tr>
+                  <td>Enfatiza a ordem temporal das mensagens</td>
+                  <td>Enfatiza as relações estruturais entre objetos</td>
+                </tr>
+                <tr>
+                  <td>Mostra a duração de operações com barras de ativação</td>
+                  <td>Numera mensagens para indicar a ordem</td>
+                </tr>
+                <tr>
+                  <td>Melhor para visualizar o fluxo sequencial</td>
+                  <td>Melhor para visualizar a rede de colaboração</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <p>Em ambos os casos, as interações ilustram colaborações entre partes do sistema para realizar um determinado cenário ou caso de uso. Esses diagramas ajudam a responder perguntas como "quem faz o quê?" e "em que ordem?". Eles complementam os diagramas estáticos, fornecendo a visão de como o comportamento flui através das estruturas definidas.</p>
+        </div>
       </section>
       
       <section id="avancada">
-        <h2>Modelagem Avançada</h2>
-        <p>A UML oferece mecanismos para adaptar e aprofundar a modelagem conforme as necessidades do sistema. Um desses mecanismos são os <strong>estereótipos</strong>, que permitem estender a linguagem adicionando classificações específicas aos elementos. Por exemplo, pode-se marcar uma classe com o estereótipo <code>&laquo;interface&raquo;</code> para indicar que se trata de uma interface, ou usar <code>&laquo;controle&raquo;</code>, <code>&laquo;entidade&raquo;</code>, <code>&laquo;limite&raquo;</code> (boundary) em modelos de análise. Os estereótipos fazem parte de um <strong>Perfil UML</strong>, que é um conjunto de estereótipos, valores taggeados e restrições personalizado para um domínio ou propósito específico. Perfis UML permitem adaptar a UML para áreas como sistemas embarcados, modelagem de negócios, redes, entre outros, sem alterar a linguagem base.</p>
+        <h2><i class="fas fa-graduation-cap"></i> Modelagem Avançada</h2>
+        <p class="section-intro">A UML oferece mecanismos para adaptar e aprofundar a modelagem conforme as necessidades do sistema. Estes conceitos avançados permitem maior expressividade e precisão na modelagem.</p>
         
-        <p>Outro conceito avançado é o uso de <strong>OCL (Object Constraint Language)</strong>, uma linguagem de especificação textual para definir restrições e expressar lógica que não é facilmente visualizada em diagramas. Com OCL, pode-se adicionar invariantes (condições que devem ser sempre verdadeiras para uma classe), pré-condições e pós-condições de operações, entre outros. Isso enriquece o modelo com detalhes precisos de regras de negócio ou condições, garantindo uma especificação mais completa do sistema além do que os diagramas por si só oferecem.</p>
+        <div class="advanced-grid">
+          <div class="advanced-item">
+            <h3><i class="fas fa-tags"></i> Estereótipos</h3>
+            <p>Os estereótipos permitem estender a linguagem adicionando classificações específicas aos elementos. Por exemplo, pode-se marcar uma classe com o estereótipo <code>&laquo;interface&raquo;</code> para indicar que se trata de uma interface.</p>
+            <div class="code-example">
+              <pre><code>«boundary»
+class TelaLogin { ... }
+
+«controller»
+class ControladorAcesso { ... }
+
+«entity»
+class Usuario { ... }</code></pre>
+            </div>
+            <p>Estereótipos comuns incluem:</p>
+            <ul>
+              <li><code>&laquo;boundary&raquo;</code> - Classes de interface com o usuário</li>
+              <li><code>&laquo;control&raquo;</code> - Classes controladoras</li>
+              <li><code>&laquo;entity&raquo;</code> - Classes de dados/entidades</li>
+              <li><code>&laquo;service&raquo;</code> - Classes de serviço</li>
+              <li><code>&laquo;repository&raquo;</code> - Classes de acesso a dados</li>
+            </ul>
+          </div>
+          
+          <div class="advanced-item">
+            <h3><i class="fas fa-puzzle-piece"></i> Perfis UML</h3>
+            <p>Um <strong>Perfil UML</strong> é um conjunto de estereótipos, valores taggeados e restrições personalizado para um domínio ou propósito específico. Perfis UML permitem adaptar a UML para áreas como sistemas embarcados, modelagem de negócios, redes, entre outros, sem alterar a linguagem base.</p>
+            <div class="info-box small">
+              <h4>Exemplos de Perfis UML</h4>
+              <ul>
+                <li><strong>SysML</strong> - Para engenharia de sistemas</li>
+                <li><strong>MARTE</strong> - Para sistemas de tempo real e embarcados</li>
+                <li><strong>SoaML</strong> - Para arquiteturas orientadas a serviços</li>
+                <li><strong>UML Testing Profile</strong> - Para modelagem de testes</li>
+              </ul>
+            </div>
+            <a href="https://www.omg.org/spec/UML/2.5.1/PDF" target="_blank" class="btn small-btn">Ver especificação <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          
+          <div class="advanced-item">
+            <h3><i class="fas fa-code"></i> OCL (Object Constraint Language)</h3>
+            <p>OCL é uma linguagem de especificação textual para definir restrições e expressar lógica que não é facilmente visualizada em diagramas. Com OCL, pode-se adicionar invariantes, pré-condições e pós-condições de operações.</p>
+            <div class="code-example">
+              <pre><code>context Conta inv saldoPositivo:
+   self.saldo >= 0
+
+context Conta::sacar(valor : Real) : Boolean
+pre: valor > 0 and valor <= self.saldo
+post: self.saldo = self.saldo@pre - valor</code></pre>
+            </div>
+            <p>OCL enriquece o modelo com detalhes precisos de regras de negócio ou condições, garantindo uma especificação mais completa do sistema além do que os diagramas por si só oferecem.</p>
+            <a href="https://www.omg.org/spec/OCL/" target="_blank" class="btn small-btn">Documentação OCL <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="ferramentas">
+        <h2><i class="fas fa-tools"></i> Ferramentas UML</h2>
+        <p class="section-intro">Existem diversas ferramentas disponíveis para criar diagramas UML, desde opções gratuitas até ferramentas profissionais robustas. A escolha depende das necessidades específicas do projeto.</p>
         
-        <p>A UML também inclui diagramas adicionais que são úteis em cenários específicos, embora sejam menos usados no dia a dia. Um exemplo é o <strong>Diagrama de Tempo (Timing Diagram)</strong>, que foca na variação de valores ou estados ao longo do tempo (útil para sistemas de tempo real ou análise temporal de eventos). Outro é o <strong>Diagrama de Visão Geral de Interação</strong> (mencionado anteriormente), que apresenta uma síntese de fluxos de interação complexos, combinando diagramas de atividade e sequência. Já discutimos também o Diagrama de Estrutura Composta, que é considerado avançado por mostrar detalhes internos de classes e colaborações de objetos internos.</p>
-        
-        <p>Por fim, a modelagem avançada envolve estruturar modelos grandes de forma gerenciável. Isso inclui dividir o sistema em múltiplos <strong>pacotes</strong> ou submodelos para organizar conceitos, usar <strong>sub-sistemas</strong> ou componentes para quebrar a complexidade, e aplicar princípios de modelagem de forma consistente (por exemplo, separar camadas de apresentação, negócio e persistência em pacotes distintos). Ferramentas CASE modernas permitem inclusive a geração de código a partir de modelos UML (engenharia direta) e a extração de modelos a partir de código existente (engenharia reversa). Dominar os recursos avançados da UML permite não apenas representar sistemas complexos de forma compreensível, mas também manter a consistência e a integridade do modelo conforme o sistema evolui.</p>
+        <div class="tools-grid">
+          <div class="tool-item">
+            <h3>Draw.io</h3>
+            <div class="tool-rating">
+              <span class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </span>
+              <span class="tool-price">Gratuito</span>
+            </div>
+            <p>Ferramenta online gratuita com suporte completo para diagramas UML. Permite integração com Google Drive, OneDrive, GitHub e GitLab.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i> Interface intuitiva</li>
+              <li><i class="fas fa-check"></i> Totalmente gratuito</li>
+              <li><i class="fas fa-check"></i> Versão desktop disponível</li>
+              <li><i class="fas fa-check"></i> Exportação em múltiplos formatos</li>
+            </ul>
+            <a href="https://app.diagrams.net/" target="_blank" class="btn tool-btn">Acessar <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          
+          <div class="tool-item">
+            <h3>Lucidchart</h3>
+            <div class="tool-rating">
+              <span class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+              <span class="tool-price">Freemium</span>
+            </div>
+            <p>Ferramenta baseada em nuvem com rica funcionalidade de diagramação UML e excelentes recursos de colaboração.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i> Colaboração em tempo real</li>
+              <li><i class="fas fa-check"></i> Integração com ferramentas empresariais</li>
+              <li><i class="fas fa-check"></i> Suporte a todos os diagramas UML</li>
+              <li><i class="fas fa-check"></i> Templates prontos para uso</li>
+            </ul>
+            <a href="https://www.lucidchart.com/" target="_blank" class="btn tool-btn">Acessar <i class="fas fa-external-link-alt"></i></a>
+          </div>
+          
+          <div class="tool-item">
+            <h3>PlantUML</h3>
+            <div class="tool-rating">
+              <span class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+              <span class="tool-price">Gratuito</span>
+            </div>
+            <p>Ferramenta baseada em texto para criar diagramas UML usando uma linguagem de marcação simples. Popular entre desenvolvedores.</p>
+            <ul class="tool-features">
+              <li><i class="fas fa-check"></i> Baseado em texto (útil para versionamento)</li>
+              <li><i class="fas fa-check"></i> Integração com IDE e ferramentas de documentação</li>
+              <li><i class="fas fa-check"></i> Open-source</li>
+              <li><i class="fas fa-check"></i> Excelente para gerar diagramas de código</li>
+            </ul>
+            <a href="https://plantuml.com/" target="_blank" class="btn tool-btn">Acessar <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
       </section>
       
       <section id="quiz">
-        <h2>Quiz Interativo</h2>
-        <p>Teste seus conhecimentos sobre UML respondendo às perguntas abaixo:</p>
+        <h2><i class="fas fa-question-circle"></i> Quiz Interativo</h2>
+        <p class="section-intro">Teste seus conhecimentos sobre UML respondendo às perguntas abaixo. Este quiz aborda conceitos fundamentais, tipos de diagramas e relacionamentos UML.</p>
+        
         <div id="quiz-container">
-          <div class="quiz-question">
-            <p><strong>1.</strong> Qual diagrama UML é usado para representar o fluxo de atividades ou processos de negócio?</p>
-            <ul>
-              <li><label><input type="radio" name="q1" value="a"> Diagrama de Classes</label></li>
-              <li><label><input type="radio" name="q1" value="b"> Diagrama de Atividades</label></li>
-              <li><label><input type="radio" name="q1" value="c"> Diagrama de Componentes</label></li>
-              <li><label><input type="radio" name="q1" value="d"> Diagrama de Implantação</label></li>
-            </ul>
+          <div class="quiz-questions">
+            <!-- Pergunta 1 -->
+            <div class="quiz-question active" data-question="1">
+              <h3>1. Qual diagrama UML é usado para representar o fluxo de atividades ou processos de negócio?</h3>
+              <ul>
+                <li><label><input type="radio" name="q1" value="a"> Diagrama de Classes</label></li>
+                <li><label><input type="radio" name="q1" value="b"> Diagrama de Atividades</label></li>
+                <li><label><input type="radio" name="q1" value="c"> Diagrama de Componentes</label></li>
+                <li><label><input type="radio" name="q1" value="d"> Diagrama de Implantação</label></li>
+              </ul>
+            </div>
+            
+            <!-- Pergunta 2 -->
+            <div class="quiz-question" data-question="2">
+              <h3>2. Que relacionamento indica uma relação forte do tipo todo-parte, em que a parte não pode existir sem o todo?</h3>
+              <ul>
+                <li><label><input type="radio" name="q2" value="a"> Associação</label></li>
+                <li><label><input type="radio" name="q2" value="b"> Agregação</label></li>
+                <li><label><input type="radio" name="q2" value="c"> Composição</label></li>
+                <li><label><input type="radio" name="q2" value="d"> Dependência</label></li>
+              </ul>
+            </div>
+            
+            <!-- Pergunta 3 -->
+            <div class="quiz-question" data-question="3">
+              <h3>3. Qual dos seguintes NÃO é um diagrama comportamental na UML?</h3>
+              <ul>
+                <li><label><input type="radio" name="q3" value="a"> Diagrama de Casos de Uso</label></li>
+                <li><label><input type="radio" name="q3" value="b"> Diagrama de Sequência</label></li>
+                <li><label><input type="radio" name="q3" value="c"> Diagrama de Componentes</label></li>
+                <li><label><input type="radio" name="q3" value="d"> Diagrama de Atividades</label></li>
+              </ul>
+            </div>
           </div>
-          <div class="quiz-question">
-            <p><strong>2.</strong> Que relacionamento indica uma relação forte do tipo todo-parte, em que a parte não pode existir sem o todo?</p>
-            <ul>
-              <li><label><input type="radio" name="q2" value="a"> Associação</label></li>
-              <li><label><input type="radio" name="q2" value="b"> Agregação</label></li>
-              <li><label><input type="radio" name="q2" value="c"> Composição</label></li>
-              <li><label><input type="radio" name="q2" value="d"> Dependência</label></li>
-            </ul>
+          
+          <div class="quiz-navigation">
+            <button id="prev-question" class="btn nav-btn" disabled><i class="fas fa-arrow-left"></i> Anterior</button>
+            <button id="next-question" class="btn nav-btn">Próxima <i class="fas fa-arrow-right"></i></button>
+            <button id="submit-quiz" class="btn primary-btn hidden">Verificar Respostas</button>
           </div>
-          <button id="submit-quiz">Verificar Respostas</button>
-          <div id="quiz-result"></div>
+          
+          <div id="quiz-result" class="hidden">
+            <h3><i class="fas fa-award"></i> Resultado do Quiz</h3>
+            <div class="result-container">
+              <div class="score-circle">
+                <div class="score-number">0</div>
+                <div class="score-text">de 3</div>
+              </div>
+              <div class="result-message"></div>
+            </div>
+            <button id="retry-quiz" class="btn primary-btn">Tentar Novamente</button>
+          </div>
         </div>
       </section>
       
       <section id="referencias">
-        <h2>Para Aprofundamento</h2>
-        <p>Para saber mais sobre UML e aprofundar nos conceitos, confira os links e referências a seguir:</p>
-        <ul>
-          <li><a href="https://pt.wikipedia.org/wiki/UML" target="_blank">UML - Wikipédia (Linguagem de Modelagem Unificada)</a></li>
-          <li><a href="https://creately.com/blog/pt/diagrama/guia-de-tipos-de-diagramas-uml-aprenda-sobre-todos-os-tipos-de-diagramas-uml-com-exemplos/" target="_blank">Guia de Tipos de Diagramas UML - Creately (Blog)</a></li>
-          <li><a href="https://www.devmedia.com.br/modelagem-de-sistemas-com-uml-principais-tipos-de-diagramas/27913" target="_blank">Artigo DevMedia - Modelagem de sistemas com UML (Principais diagramas)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=CWj2F9dfIaU" target="_blank">Vídeo: Curso de UML - Overview dos principais diagramas UML (YouTube)</a></li>
-          <li><a href="https://www.uml.org/" target="_blank">Site Oficial da UML (OMG)</a> - Especificações e materiais oficiais (em inglês)</li>
-        </ul>
+        <h2><i class="fas fa-book-open"></i> Recursos e Referências</h2>
+        <div class="references-grid">
+          <div class="reference-category">
+            <h3><i class="fas fa-book"></i> Livros Recomendados</h3>
+            <ul class="reference-list">
+              <li>
+                <div class="reference-item">
+                  <div class="reference-title">UML Distilled: A Brief Guide to the Standard Object Modeling Language</div>
+                  <div class="reference-author">Martin Fowler</div>
+                  <p>Um guia conciso e prático para os aspectos essenciais da UML, escrito por um dos principais autores de engenharia de software.</p>
+                </div>
+              </li>
+              <li>
+                <div class="reference-item">
+                  <div class="reference-title">Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design</div>
+                  <div class="reference-author">Craig Larman</div>
+                  <p>Explora como utilizar UML e padrões de design em conjunto para análise e design orientados a objetos.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="reference-category">
+            <h3><i class="fas fa-video"></i> Vídeos e Tutoriais</h3>
+            <ul class="reference-list">
+              <li>
+                <div class="reference-item">
+                  <div class="reference-title"><a href="https://www.youtube.com/watch?v=CWj2F9dfIaU" target="_blank">Curso de UML - Overview dos principais diagramas UML</a></div>
+                  <div class="reference-author">Loiane Groner</div>
+                  <p>Tutorial abrangente em português sobre os principais diagramas UML e sua aplicação.</p>
+                </div>
+              </li>
+              <li>
+                <div class="reference-item">
+                  <div class="reference-title"><a href="https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G" target="_blank">Curso de UML</a></div>
+                  <div class="reference-author">Curso em Vídeo</div>
+                  <p>Playlist completa sobre modelagem UML com exemplos práticos.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="reference-category">
+            <h3><i class="fas fa-globe"></i> Sites e Recursos Online</h3>
+            <ul class="reference-list">
+              <li>
+                <div class="reference-item">
+                  <div class="reference-title"><a href="https://www.uml.org/" target="_blank">Site Oficial da UML (OMG)</a></div>
+                  <p>Site oficial com especificações e materiais oficiais sobre UML.</p>
+                </div>
+              </li>
+              <li>
+                <div class="reference-item">
+                  <div class="reference-title"><a href="https://www.uml-diagrams.org/" target="_blank">UML-Diagrams.org</a></div>
+                  <p>Referência completa com exemplos detalhados de todos os tipos de diagramas UML.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
     </div>
   </main>
   
   <footer>
     <div class="container">
-      <p>&copy; 2025 - Página de estudo sobre UML</p>
+      <p>&copy; 2025 - Guia Completo sobre UML (Unified Modeling Language)</p>
     </div>
   </footer>
   
